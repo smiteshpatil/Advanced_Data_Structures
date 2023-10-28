@@ -1,5 +1,3 @@
-package dsa;
-
 import java.util.ArrayList;
 
 public class CommonElems {
@@ -10,7 +8,7 @@ public class CommonElems {
 		int[] arr1 = { 1, 3, 4, 6, 7, 9 };
 		int[] arr2 = { 1, 2, 4, 5, 9, 10 };
 
-//		ArrayList<Integer> commonElems = findCommonElems(arr1, arr2);
+		// ArrayList<Integer> commonElems = findCommonElems(arr1, arr2);
 		ArrayList<Integer> commonElems = findCommonElemsOptimized(arr1, arr2);
 
 		for (int i : commonElems)
@@ -33,7 +31,6 @@ public class CommonElems {
 		return common;
 	}
 
-	
 	// function to find common elements (both arrays must be sorted)
 	// two pointer approach
 	public static ArrayList<Integer> findCommonElemsOptimized(int[] a1, int[] a2) {
@@ -43,7 +40,7 @@ public class CommonElems {
 		int i = 0, j = 0;
 
 		while (i != a1.length && j != a2.length) {
-			
+
 			if (a1[i] == a2[j])
 				common.add(a1[i]);
 			else if (a1[i] < a2[j])

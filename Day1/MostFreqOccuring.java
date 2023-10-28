@@ -1,5 +1,3 @@
-package dsa;
-
 import java.util.HashMap;
 
 public class MostFreqOccuring {
@@ -8,12 +6,12 @@ public class MostFreqOccuring {
 
 		int[] array = { 1, 3, 1, 3, 2, 1, 4, 4, 4, 4, 4, 4 };
 
-//		Integer mostFreqEle = findMostFreqEle(array);
+		// Integer mostFreqEle = findMostFreqEle(array);
 		Integer mostFreqEle = findMostFreqUsingHM(array);
 		System.out.println(mostFreqEle);
 	}
 
-// naive solution O(n^2)
+	// naive solution O(n^2)
 	public static Integer findMostFreqEle(int[] array) {
 
 		// if array is empty return null
@@ -41,9 +39,7 @@ public class MostFreqOccuring {
 		return mostFreqEle;
 	}
 
-	
-	
-// optimized using hashMap  O(n)
+	// optimized using hashMap O(n)
 
 	public static Integer findMostFreqUsingHM(int[] array) {
 
