@@ -20,15 +20,15 @@ public class CommonElems {
 	// O(n^2)
 	public static ArrayList<Integer> findCommonElems(int[] a1, int[] a2) {
 
-		ArrayList<Integer> common = new ArrayList<Integer>();
+		ArrayList<Integer> commonArrayList = new ArrayList<Integer>();
 
 		for (int i = 0; i < a1.length; i++) {
 			for (int j = 0; j < a2.length; j++) {
 				if (a1[i] == a2[j])
-					common.add(a1[i]);
+					commonArrayList.add(a1[i]);
 			}
 		}
-		return common;
+		return commonArrayList;
 	}
 
 	// function to find common elements (both arrays must be sorted)
@@ -41,9 +41,11 @@ public class CommonElems {
 
 		while (i != a1.length && j != a2.length) {
 
-			if (a1[i] == a2[j])
+			if (a1[i] == a2[j]) {
 				common.add(a1[i]);
-			else if (a1[i] < a2[j])
+				i++;
+				j++;
+			} else if (a1[i] < a2[j])
 				i++;
 			else
 				j++;
