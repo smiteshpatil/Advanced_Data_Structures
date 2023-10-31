@@ -9,7 +9,13 @@ package day4;
  */
 public class FindOriginalArrayOFPrefix {
     public static void main(String[] args) {
+        int[] pref = { 5, 2, 0, 3, 1 };
 
+        int[] array = findArray(pref);
+
+        for (int i : array) {
+            System.out.print(i + " ");
+        }
     }
 
     public static int[] findArray(int[] pref) {
