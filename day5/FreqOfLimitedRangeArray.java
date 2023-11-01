@@ -16,6 +16,10 @@ public class FreqOfLimitedRangeArray {
 
         frequencyCount(array, N, P);
 
+        for (int i : array) {
+            System.out.print(i + " ");
+        }
+
     }
 
     // Function to count the frequency of all elements from 1 to N in the array.
